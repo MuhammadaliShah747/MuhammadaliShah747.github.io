@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Muhammad Ali Shah</title>
+    <meta name="description" content="Personal landing page for Muhammad Ali Shah" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <style>
+        :root{
+            --bg-1:#0f172a; /* slate-900 */
+            --bg-2:#1e293b; /* slate-800 */
+            --accent-1:#22d3ee; /* cyan-400 */
+            --accent-2:#a78bfa; /* violet-400 */
+            --text:#e5e7eb;     /* gray-200 */
+        }
+
+        *{ box-sizing:border-box; }
+        html,body{
+            height:100%;
+            margin:0;
+            font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            color:var(--text);
+            background: radial-gradient(1200px 600px at 10% 10%, rgba(34,211,238,.15), transparent 60%),
+                        radial-gradient(1200px 600px at 90% 80%, rgba(167,139,250,.15), transparent 60%),
+                        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+            overflow-x:hidden;
+        }
+
+        .container{
+            min-height:100dvh;
+            display:grid;
+            place-items:center;
+            padding:24px;
+            position:relative;
+            isolation:isolate;
+        }
+
+        /* Subtle animated gradient rings */
+        .orbs{
+            position:absolute; inset:0; pointer-events:none; z-index:-1;
+        }
+        .orb{
+            position:absolute; width:38vmax; height:38vmax; border-radius:50%;
+            filter: blur(50px) saturate(140%);
+            opacity:.35; mix-blend-mode:screen;
+            animation: float 18s ease-in-out infinite;
+        }
+        .orb.one{ background: radial-gradient(circle at 30% 30%, var(--accent-1), transparent 60%); top:-10%; left:-10%; animation-delay: -4s; }
+        .orb.two{ background: radial-gradient(circle at 70% 70%, var(--accent-2), transparent 60%); bottom:-15%; right:-15%; animation-delay: -10s; }
+        @keyframes float{ 0%,100%{ transform:translateY(0) translateX(0);} 50%{ transform:translateY(-20px) translateX(10px);} }
+
+        .card{
+            width:min(920px, 92vw);
+            padding:48px 40px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+            border:1px solid rgba(255,255,255,0.12);
+            border-radius:24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);
+            backdrop-filter: blur(8px);
+        }
+
+        .name{
+            font-size: clamp(36px, 7vw, 72px);
+            line-height:1.05;
+            font-weight:800;
+            letter-spacing: .5px;
+            margin:0 0 12px 0;
+            background: linear-gradient(92deg, var(--accent-1), var(--accent-2));
+            -webkit-background-clip:text;
+            background-clip:text;
+            color: transparent;
+            text-shadow: 0 10px 30px rgba(167,139,250,.12), 0 2px 8px rgba(34,211,238,.12);
+        }
+
+        .tagline{
+            margin:0 0 28px 0;
+            font-weight:400;
+            opacity:.9;
+        }
+
+        .chip-row{
+            display:flex; flex-wrap:wrap; gap:10px; margin:20px 0 28px 0;
+        }
+        .chip{
+            padding:8px 14px; border-radius:999px; font-size:14px;
+            border:1px solid rgba(255,255,255,.14);
+            background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+        }
+
+        .cta-row{
+            display:flex; flex-wrap:wrap; gap:14px; margin-top:8px;
+        }
+        .btn{
+            appearance:none; border:none; cursor:pointer;
+            padding:12px 18px; border-radius:12px; font-weight:600; font-size:15px;
+            transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+            display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--text);
+            background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
+            border:1px solid rgba(255,255,255,.16);
+            box-shadow: 0 6px 18px rgba(0,0,0,.28);
+        }
+        .btn:hover{ transform: translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.34); }
+        .btn.primary{
+            background: linear-gradient(92deg, var(--accent-1), var(--accent-2));
+            color:#0b1020; border-color: transparent;
+        }
+
+        footer{
+            margin-top:28px; opacity:.6; font-size:13px;
+        }
+
+        /* Sparkle accent */
+        .sparkle{
+            position:relative;
+        }
+        .sparkle::after{
+            content:"✦"; position:absolute; right:-16px; top:-10px; font-size:18px;
+            background: linear-gradient(92deg, var(--accent-1), var(--accent-2));
+            -webkit-background-clip:text; background-clip:text; color:transparent;
+            animation: twinkle 2.2s ease-in-out infinite;
+        }
+        @keyframes twinkle{ 0%,100%{opacity:0; transform:translateY(0)} 50%{opacity:1; transform:translateY(-4px)} }
+
+        /* Responsive tweaks */
+        @media (max-width:520px){
+            .card{ padding:36px 24px; border-radius:18px; }
+            .cta-row{ gap:10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="orbs">
+            <div class="orb one"></div>
+            <div class="orb two"></div>
+        </div>
+
+        <main class="card" role="main" aria-labelledby="name-heading">
+            <h1 id="name-heading" class="name sparkle">Muhammad Ali Shah</h1>
+            <p class="tagline">A minimalist personal page — clean, fast, and a bit fancy.</p>
+
+            <div class="chip-row" aria-label="highlights">
+                <span class="chip">Web</span>
+                <span class="chip">Design</span>
+                <span class="chip">Creativity</span>
+            </div>
+
+            <div class="cta-row">
+                <a class="btn primary" href="#" aria-label="Primary action">Say Hi</a>
+                <a class="btn" href="#" aria-label="Secondary action">View Work</a>
+            </div>
+
+            <footer>
+                © <span id="year"></span> Muhammad Ali Shah
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+
