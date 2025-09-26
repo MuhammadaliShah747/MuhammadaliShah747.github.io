@@ -1,0 +1,52 @@
+.images {
+    width: 200px;
+    height: 200px;
+
+}
+
+
+body {
+    color: black;
+    font-family: Arial, sans-serif;
+    background-color: rgb(202, 255, 250);
+}
+
+.header {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.contact-me a:link {
+    color: black;
+    text-decoration: none;
+
+}
+
+.contact-me a:link:hover {
+    color: black;
+    text-decoration: none;
+    background-color: whitesmoke;
+}
+
+.sub-head {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.edu-links a:link {
+    color: black;
+    text-decoration: none;
+
+}
+
+.edu-links a:link:hover {
+    background-color: whitesmoke;
+    font-size: large;
+}
+
+.edu-links a:visited {
+    color: black
+}
