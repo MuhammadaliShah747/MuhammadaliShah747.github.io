@@ -1,0 +1,104 @@
+<form method="get" action="#">
+    <fieldset>
+        <legend>Hi there, let's meet</legend>
+
+        <p>
+            <label class="labels">Name:</label>
+            <input type="text" name="name" required class="ins" placeholder="Enter your name">
+        </p>
+
+        <p>
+            <label class="labels">Email:</label>
+            <input type="email" name="email" required class="ins" placeholder="Enter your email">
+        </p>
+
+        <p>
+            <label class="labels">Phone Number:</label>
+            <input type="tel" name="phone" required class="ins" placeholder="Enter your phone number">
+        </p>
+
+        <p>
+            <label class="labels">When to Meet:</label>
+            <input type="date" name="date" required class="ins">
+        </p>
+
+        <p>
+            <label class="labels">How to Meet:</label>
+            <select name="meet-method" class="ins">
+                <option value="in-person">In Person</option>
+                <option value="video-call">Video Call</option>
+                <option value="phone-call">Phone Call</option>
+            </select>
+        </p>
+
+        <p>
+            <label class="labels">Anything you want to share?</label><br>
+            <textarea name="comments" rows="4" cols="30" class="ins" placeholder="Speak freely"></textarea>
+        </p>
+
+        <p style="text-align:center;">
+            <input type="submit" value="Submit" class="final">
+        </p>
+    </fieldset>
+</form>
+
+<style>
+    form {
+        padding: 2rem;
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 50%;
+        background-color: #7b69ff;
+        margin: 2rem auto;
+    }
+
+    legend {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    .labels {
+        display: inline-block;
+        width: 160px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .ins {
+        border-radius: 10px;
+        height: 2rem;
+        background-color: aliceblue;
+        border: none;
+        outline: none;
+        padding: 0.3rem 0.6rem;
+        width: 200px;
+    }
+
+    textarea.ins {
+        width: 300px;
+        height: auto;
+    }
+
+    .final {
+        padding: 0.6rem 1.2rem;
+        border-radius: 10px;
+        background-color: aqua;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .final:hover {
+        background-color: #0c8af8;
+        transition: 0.2s;
+    }
+</style>

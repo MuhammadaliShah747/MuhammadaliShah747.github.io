@@ -1,0 +1,129 @@
+.hobby-part {
+    margin-top: 2rem;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 5rem;
+
+}
+
+.hobby-part li {
+    font-style: italic;
+    margin-left: 1rem;
+}
+
+body {
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(202, 255, 250);
+}
+
+.header {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+
+
+}
+
+.contact-me a:link {
+    color: black;
+    text-decoration: none;
+
+}
+
+
+caption {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top: 5px solid red;
+    border-bottom: 12px solid red;
+    margin-bottom: 2rem;
+
+}
+
+
+
+
+
+.images {
+    border-radius: 40%;
+    transition: 0.5s;
+    height: 80px;
+    width: 80px;
+}
+
+
+.images:hover {
+    height: 100px;
+    width: 100px;
+    transition: 0.5s;
+}
+
+.sub-head {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top: 5px solid red;
+    border-bottom: 12px solid red;
+    margin-top: 2rem;
+    width: 77rem;
+
+}
+
+.edu-part {
+    text-align: center;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+table {
+    border: solid bisque 5px;
+    border-collapse: collapse;
+
+}
+
+.edu-part th,
+.edu-part td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.edu-part td {
+    font-weight: 500;
+}
+
+
+tbody tr:hover {
+    background-color: rgb(141, 141, 255)
+}
+
+a[href*="linkedin.com"] {
+    border-color: blue;
+}
+
+header h1::after {
+
+    display: block;
+    width: 50%;
+    height: 3px;
+    margin: 5px 0 10px 0;
+    background-color: rgb(0, 100, 255);
+    border-radius: 5px;
+}
